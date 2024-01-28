@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- ./index.html -->
+
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="icon" href="./assets/images/treasure.ico" type="image/x-icon">
+    <script src="./assets/js/main.js" defer></script>
+    <title>Schattenjacht</title>
+</head>
+
+<body>
+    <div class="info-container">
+        <div id="levens">Levens: 0</div>
+        <div id="scoreInfo">Score: 0</div>
+    </div>
+
+    <div class="resultaat-container">
+        <p id="resultaatBericht"></p>
+        <p id="resultaatScore">Jouw score: <span id="score"></span></p>
+        <button id="restartButton" style="display: none;">Speel opnieuw</button>
+    </div>
+
+    <div class="game-container">
+        <button id="startButton">Start</button>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+</body>
+
+</html>
