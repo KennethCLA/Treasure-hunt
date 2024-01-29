@@ -79,14 +79,18 @@ body {
 }
 
 .info-container {
+  display: none;
   padding: 10px;
   border-radius: 10px;
   background-color: lightgray;
   position: absolute;
   z-index: 2;
-  top: 50px;
-  right: center;
+  top: 35px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.info-container p {
+  margin: 6px 0;
 }
 
 .resultaat-container {

@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let gameStarted = false;
 
     function initializeGame() {
-
         canvas.width = cols * gridSize;
         canvas.height = rows * gridSize;
 
@@ -92,6 +91,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const gameCanvas = document.getElementById("gameCanvas");
         if (gameCanvas) {
             gameCanvas.style.boxShadow = "0 0 5px rgba(0, 0, 0, 0.3)";
+        }
+
+        const infoContainer = document.querySelector(".info-container");
+
+        if (infoContainer) {
+            infoContainer.style.display = "block";
         }
 
         const restartButton = document.getElementById("restartButton");
