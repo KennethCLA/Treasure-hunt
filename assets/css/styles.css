@@ -9,6 +9,12 @@
   --enemy-color: #ff0000;
 }
 
+* {
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -22,15 +28,49 @@ body {
   text-align: center;
 }
 
-canvas {
-  border: 1px solid #000;
+#gameCanvas {
   display: block;
+  border-radius: 10px;
+}
+
+.btn {
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn::before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.btn:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
 }
 
 #startButton {
-  font-size: 18px;
-  padding: 10px;
-  cursor: pointer;
   position: absolute;
   z-index: 2;
   top: 50%;
@@ -39,23 +79,29 @@ canvas {
 }
 
 .info-container {
-  padding: 5px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 10px;
   background-color: lightgray;
   position: absolute;
   z-index: 2;
   top: 50px;
   right: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .resultaat-container {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
+  width: 300px;
+  height: 300px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
+  border-radius: 10px;
   padding: 20px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -63,10 +109,9 @@ canvas {
 }
 
 #restartButton {
-    margin: auto;
-    padding: 10px;
-    cursor: pointer;
-  }
+  display: none;
+  margin: 1em;
+}
 
 #gameCanvas {
   height: 600px;
